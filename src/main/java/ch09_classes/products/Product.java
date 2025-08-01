@@ -15,7 +15,7 @@ public class Product {
 
 
     void showInfo() {
-        System.out.println("시리얼 넘버 : " + productNum);
+        System.out.println("\n시리얼 넘버 : " + productNum);
         System.out.println("제품 타이틀 : " + productName);
     }
 }

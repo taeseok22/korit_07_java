@@ -21,5 +21,9 @@ public class ProductMain {
         product4.productName = "ZFlip6";
 
         product1.showInfo();
+        product2.showInfo();
+        product3.showInfo();
+        product4.showInfo();
+
     }
 }
