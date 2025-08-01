@@ -49,7 +49,6 @@ public class Student {
     String name;
     double score;
 
-
     Student() {
         System.out.println("기본 생성자로 객체를 생성했습니다.");
     }
