@@ -27,8 +27,6 @@ public class Main {
         TvRemoteController tvRemoteController = new TvRemoteController(
         new PowerButton(), new ChannelDownButton(), new ChannelUpButton(),
                 new VolumeUpButton(), new VolumeDownButton());
-        AirConditionerController airConditionerController = new AirConditionerController( new PowerButton(),
-                new TemperatureDownButton(), new TemperatureUpButton(), new ModeChangeButton());
 
         tvRemoteController.onPressedPowerButton();
         tvRemoteController.onUpChannelUpButton();
@@ -49,6 +47,9 @@ public class Main {
         System.out.println(tvRemoteController.onUpVolumeUpButton());        // # 1 String
         tvRemoteController.onUpVolumeUPButton();        // # 2 void
         System.out.println();
+
+        AirConditionerController airConditionerController = new AirConditionerController( new PowerButton(),
+                new TemperatureDownButton(), new TemperatureUpButton(), new ModeChangeButton());
         // 객체 생성
         airConditionerController.airConditionerController();
         // 전원
@@ -59,6 +60,7 @@ public class Main {
         // 온도 올리기
         airConditionerController.onPressedTemperatureUpButton();
         airConditionerController.onUpTemperatureUpButton();
+        System.out.println(airConditionerController.onUpTemperatureUpButton1());
         // 모드 바꾸기
         airConditionerController.onPressedModeChangeButton();
         airConditionerController.onPressedModeChangeButton();

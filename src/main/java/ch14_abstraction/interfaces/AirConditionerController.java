@@ -54,9 +54,9 @@ public class AirConditionerController extends PowerButton{
         temperatureUpButton.onPressed();
     }
 
-//    public String onUpTemperatureUpButton() {
-//        return temperatureUpButton.onUp();
-//    }
+    public String onUpTemperatureUpButton1() {
+        return temperatureUpButton.onUp();
+    }
     public void onUpTemperatureUpButton() {
         System.out.println(temperatureUpButton.onUp());
     }
