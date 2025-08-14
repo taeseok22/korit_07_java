@@ -5,29 +5,32 @@ import java.util.*;
 public class FieldTrip {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<String> fieldTripsList = new ArrayList<>();
+        List<String> fieldTrips = new ArrayList<>();
         Set<String> fieldTripSet = new HashSet<>();
         List<String> finalFieldTrips = new ArrayList<>();
 
-        int student = scanner.nextInt();
-        System.out.println("몇 명의 학생이 수학 여행지를 입력하시겠습니까? : " + student);
-
-        for (int i = 0 ; i < student + (1) + i++;) {
-
-            System.out.println();
+        int student = 0;
+        System.out.println("몇 명의 학생의 수학 여행지를 입력하시겠습니까? : ");
+        student = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 0 ; i < student ; i++) {
+            System.out.print((i+1) + "번 학생의 수학 여행지를 입력하세요 : ");
+            String fieldTrip = scanner.nextLine();
+            fieldTrips.add(fieldTrip);
         }
-
-        for (int i = 0 ; i < fieldTripsList.size() ; i++) {
-            System.out.print(i + "번 학생의 수학 여행지를 입력하세요 : ");
-            fieldTripsList.add("");
+        System.out.println();
+        for (int i = 0 ; i < student ; i++) {
+            System.out.println((i+1) + " 번 학생의 후보지: " + fieldTrips.get(i));
         }
-
-        fieldTripsList.add("제주");
-        fieldTripsList.add("제주");
-        fieldTripsList.add("민속촌");
-        fieldTripsList.add("민속촌");
-        fieldTripsList.add("제주");
-        System.out.println(fieldTripsList);
+        fieldTrips.addAll(fieldTripSet);
+        System.out.println();
+        // ste 에서 list로 옮긴다 -> 중복 제거된 element 들을 추후 추출하기 위해
+        finalFieldTrips.addAll(fieldTripSet);
+        System.out.println("수학 여행 후보지는: ");
+        for (String trip : fieldTrips) {
+            System.out.println(trip);
+        }
+        System.out.println("입니다.");
         /*
             1. 학생의 수롤 입력 받아 해당 횟수만큼 반복문을 돌릴 것
             2. 1번 ~ 5번 학생의 응답을 fieldTrips List에 저장할 것
